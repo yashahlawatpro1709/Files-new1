@@ -23,7 +23,7 @@ const press = {
 
 export default function Press() {
   return (
-    <section id="press" className="py-14 bg-white">
+    <section id="press" className="py-14 bg-white text-black">
       <div className="container mx-auto px-4 md:px-8">
         <h3 className="text-center py-5 text-2xl font-bold bg-white">
         9 OUT OF THE 10 MOST VALUABLE BRANDS TRUST SPRINKLR

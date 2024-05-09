@@ -1,7 +1,5 @@
 import React from "react";
 import Cards from "./components/Cards";
-import Card from "./components/Card";
-import Pagedata from "./components/Pagedata";
 import Pagedata1 from "./components/Pagedata1";
 import Suites from "./components/Suites";
 import Customer from "./components/Customer";

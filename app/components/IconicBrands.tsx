@@ -78,16 +78,16 @@ function IconicBrands1() {
   return (
     <>
     <div>
-        <h1 className='font-bold py-10 text-4xl text-center'>Why the most iconic brands chose Sprinklr</h1>
+        <h1 className='font-bold py-10 text-4xl text-center text-black'>Why the most iconic brands chose Sprinklr</h1>
     </div>
 
     <div>
       <Slider {...settings} lazyLoad='ondemand'>
         {data.map((item, index) => (
-          <div key={index} className={`carousel-item ${currentIndex === index ? 'active' : ''}`}>
+          <div key={index} className={` text-black carousel-item ${currentIndex === index ? 'active' : ''}`}>
             <div className=' px-20 bg-white mx-24 -mx-18 my-10  flex rounded-{50px}' style={{ height: '450px' }}>
             <div className='left-side w-100 h-50 mx-2'>
-              <img className="w-85 h-full mr-18 -ml-20 p-2 mx-10" src={item.image} alt="None" />
+              <img className="w-95 h-full mr-18 -ml-20 p-2 mx-10" src={item.image} alt="None" />
             </div>
             <div className='right-side p-10'>
               <h1 className='font-bold text-3xl py-7 mr-24 -ml-10'>{item.heading}</h1>

@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Customer() {
   return (
-    <div className='bg-gray-100 py-10'>
+    <div className='bg-gray-100 py-10 text-black'>
       <div>
         <h1 className='py-3 pt-3 text-4xl font-bold text-center'>Equip your customer-facing teams to deliver real CX impact</h1>
         <p className='py-10 text-center ml-24 mr-24 text-2xl truncate overflow-ellipsis'>Eliminate the chaos of using multiple tools to understand and engage your customers. Give your teams the context <br/> and collaboration they need to drive consistent customer experiences — on one unified platform.</p>
