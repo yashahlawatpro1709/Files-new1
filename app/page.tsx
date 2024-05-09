@@ -11,7 +11,6 @@ import VerticalCarousel from "./components/IconicBrands";
 import Hero from "./components/Hero";
 import Data from "./components/Data";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
 
 
 const page = () => {
