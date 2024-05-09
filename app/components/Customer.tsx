@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Customer() {
   return (
-    <div className='bg-gray-100 py-10 text-black'>
+    <div className='bg-gray-100 py-10 text-black relative'>
       <div>
         <h1 className='py-3 pt-3 text-4xl font-bold text-center'>Equip your customer-facing teams to deliver real CX impact</h1>
         <p className='py-10 text-center ml-24 mr-24 text-2xl truncate overflow-ellipsis'>Eliminate the chaos of using multiple tools to understand and engage your customers. Give your teams the context <br/> and collaboration they need to drive consistent customer experiences — on one unified platform.</p>
@@ -33,31 +33,27 @@ export default function Customer() {
               </filter>
             </defs>
           </svg>
-          <div className='px-20'>
-          <div className="absolute py-20 px-2 -mr- top-10 left-40 w-100% text-center">
-  <h2 className="text-2xl px-30 ml-10 -mr-24 pb-5 font-bold text-black">Sprinklr for Marketing Teams</h2>
-  <div className='px-24 -mr-10 ml-24'>
-  <p className="text-lg text-black -ml-10 mr-10 pb-3 " style={{ lineHeight: '1' }}>
-    Unify your consumer research, social <br/> media and content marketing teams.
-    Get <br/> real-time market insights, mitigate crises,<br/>save content costs,
-    and boost social<br/> engagement.
-  </p>
-  <span><ArrowForward className='text-blue-400'/></span><button className="px-10 mb-24 text sm py-2 mt-4 text-black rounded-full">EXPLORE SOLUTIONS</button>
-  </div>
-</div>
-</div>
-</div> 
-
-
-
-
-
-<div className='text-center py-24'>
-<button className='w-40 h-10 bg-blue-600 rounded-full text-lg text-white px-3 hover:bg-gray-400'>Book a demo</button>
-
-</div>
-
+        </div>
       </div>
+      <div className='text-center py-24'>
+        <button className='w-40 h-10 bg-blue-600 rounded-full text-lg text-white px-3 hover:bg-gray-400'>Book a demo</button>
       </div>
+      {/* Permanent overlay text */}
+      <div className="absolute bottom-20 right-14 w-full h-full flex justify-center items-center text-black">
+        <h1 className="text-xl font-bold text-center -ml-24 mr-24 -pl-24 pr-24" style={{ marginLeft: '-170px' }}>Sprinklr for Marketing Teams</h1>
+        <p className="text-lg text py-10 pb-10 pt-20 mt-24 -mb-20 -ml-24 mr-24" style={{ marginLeft: '-500px' }}>
+          Unify your consumer research, social <br/> media and content marketing teams.
+                  Get <br/> real-time market insights, mitigate crises,<br/>save content costs,
+                  and boost social<br/> engagement.
+        </p>
+      </div>
+      <div className="absolute bottom-20 right-14 w-full h-full flex justify-center items-center text-black">
+        <h1 className="text-xl font-bold text-center pl-20 -px-24 -mr-24 right-20" style={{ marginRight: '-300px' }}>Sprinklr for Customer Service Teams</h1>
+        <p className="text-lg text ml-2 -mr-24 pt-24 mt-24" style={{ marginRight: '-450px' }}>
+        Unify your contact center teams across <br/>social, digital and voice. Gain actionable<br/> contact center insights, enhance workforce<br/>engagement and deliver exceptional CX.<br/> engagement.
+        </p>
+      </div>
+
+    </div>
   );
 }
