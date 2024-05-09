@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Card, { CardProps } from './Card';
+import Card from './Card';
 
 interface CardData {
   header: string;
@@ -103,16 +103,13 @@ const Cards: React.FC = () => {
         {cardDataset.map((card, index) => (
           <div key={index}>
             <Card
+              index={index}
               header={card.header}
               subHeader={card.subHeader}
               imageSrc={card.imageSrc}
               body={card.body}
               buttonBody={card.buttonBody}
               isActive={currentIndex === index}
-              style={{
-                transform: currentIndex === index ? 'scale(1.04)' : 'scale(1)',
-                transition: 'transform 0.5s ease'
-              }}
             />
           </div>
         ))}

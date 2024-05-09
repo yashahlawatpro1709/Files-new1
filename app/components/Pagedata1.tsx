@@ -7,7 +7,7 @@ function Pagedata1() {
     <div className='whole-segment'>
   <div className='bg-gradient-to-t from-black to-transparent rounded-lg h-full overflow-hidden'>
     <div className='bg-gradient-to-b from-black to-transparent rounded-lg h-full overflow-hidden'>
-      <h1 className='text-center text-white py-10 font-bold text-3xl'>Why we're different</h1>
+      <h1 className='text-center text-white py-10 font-bold text-3xl'>Why we are different</h1>
       <div className='flex justify-center items-center space-x-20 mb-20 ml-24 mr-24 text-white'>
       <div className='grid w-1 bg-gradient-to-b from-blue-500 to-green-500 h-40 mx-8 rounded-full my-1'></div>
         <Pagedata heading="01" subheading='Unified platform' texts="A unified workspace for front-office teams, providing a true omnichannel customer experience engine with centralized governance across various markets and business units." />

@@ -142,7 +142,7 @@ export default function Card() {
   <div className="card w-100 glass mx-4">
     <div className='dataset'>
       <h1 className='text-center text-xl font-bold'>AWARD</h1>
-      <h1 className='text-center text-xl font-bold'>G2 Summer' 23 rankings</h1>
+      <h1 className='text-center text-xl font-bold'>G2 Summer 23 rankings</h1>
       <div className="card-body text-center">
         <figure className="flex justify-center">
           <img
@@ -153,7 +153,7 @@ export default function Card() {
         </figure>
       </div>
       <div className="card-body text-center">
-        <p className="text-lg font-bold">Sprinklr Service named Contact-Center leader of G2!</p>
+        <p className="text-lg font-bold">Sprinklr Service named Contact-Center leader of G2</p>
         <div className="card-actions flex justify-center">
           <a href="/gartner-cmp-2023/" className="mt-6 tablet:mt-10 desktop-sm:mt-6 desktop-lg:mt-8 flex items-center gap-3 text-baseBlack dark:text-white hover:text-primaryOceanBlue hover:underline">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" className="fill-primaryOceanBlue h-[18px] w-[18px]">
