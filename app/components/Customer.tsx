@@ -34,10 +34,10 @@ export default function Customer() {
             </defs>
           </svg>
           <div className='px-20'>
-          <div className="absolute py-20 px-24 -mr-24 top-10 left-96 w-100% text-center">
-  <h2 className="text-2xl px-30 ml-20 -mr-24 pb-5 font-bold text-black">Sprinklr for Marketing Teams</h2>
-  <div className='px-24 -mr-20 ml-24'>
-  <p className="text-lg text-black ml-10 pb-3 px-7" style={{ lineHeight: '1' }}>
+          <div className="absolute py-20 px-2 -mr- top-10 left-40 w-100% text-center">
+  <h2 className="text-2xl px-30 ml-10 -mr-24 pb-5 font-bold text-black">Sprinklr for Marketing Teams</h2>
+  <div className='px-24 -mr-10 ml-24'>
+  <p className="text-lg text-black -ml-10 mr-10 pb-3 " style={{ lineHeight: '1' }}>
     Unify your consumer research, social <br/> media and content marketing teams.
     Get <br/> real-time market insights, mitigate crises,<br/>save content costs,
     and boost social<br/> engagement.

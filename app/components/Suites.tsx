@@ -8,7 +8,7 @@ import React from 'react'
 export default function Suites() {
   return (
     <>
-    <div className='main bg-white justify-center'>
+    <div className='main bg-white justify-center text-black'>
         <h1 className='heading-1 font-bold text-5xl text-center py-10'>Four AI-powered product suites.</h1>
         <h1 className='heading-2 font-bold text-5xl text-center'>One unified platform</h1>
         <div className='main-2 flex text-center p-10 space-x-6'>

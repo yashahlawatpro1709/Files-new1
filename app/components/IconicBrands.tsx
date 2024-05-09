@@ -85,9 +85,9 @@ function IconicBrands1() {
       <Slider {...settings} lazyLoad='ondemand'>
         {data.map((item, index) => (
           <div key={index} className={`carousel-item ${currentIndex === index ? 'active' : ''}`}>
-            <div className='full px-20 bg-white mx-60 my-10 flex rounded-{50px}'>
-            <div className='left-side'>
-              <img className="w-85 h-full mr-18 -ml-20 p-4" src={item.image} alt="None" />
+            <div className=' px-20 bg-white mx-24 -mx-18 my-10  flex rounded-{50px}' style={{ height: '450px' }}>
+            <div className='left-side w-100 h-50 mx-2'>
+              <img className="w-85 h-full mr-18 -ml-20 p-2 mx-10" src={item.image} alt="None" />
             </div>
             <div className='right-side p-10'>
               <h1 className='font-bold text-3xl py-7 mr-24 -ml-10'>{item.heading}</h1>

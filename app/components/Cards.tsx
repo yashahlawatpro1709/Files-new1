@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Card from './Card';
+import { Truculenta } from 'next/font/google';
 
 interface CardData {
   header: string;
@@ -98,7 +99,7 @@ const Cards: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col overflow-hidden py-24 mb-24">
+    <div className="flex flex-col overflow-hidden py-24 mb-24 px-300">
       <Slider {...settings}>
         {cardDataset.map((card, index) => (
           <div key={index}>

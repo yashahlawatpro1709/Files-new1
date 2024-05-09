@@ -9,11 +9,12 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <>
+    <div className='text-xs'>
     <div className='flex py-10 bg-black text-white w-full justify-center relative border' style={{ gap: '200px' }}>
     <div className="absolute top-0 left-0 w-full h-full border-t border-b border-l border-black rounded-full" style={{ borderRadius: '100%' }}></div>
       <div className=''>
-        <h1 className='font-bold py-10 text-3xl '>How can we help you?</h1>
-        <div className='py-4'>
+        <h1 className='font-bold px-5 mx-5 py-10 text-2xl'>How can we help you?</h1>
+        <div className='py-4 mx-5 text-center'>
         <button className='w-50 h-12 bg-blue-600 rounded-full text-lg text-white px-5 hover:bg-gray-400'>contact us</button>
         </div>
         <div></div>
@@ -77,16 +78,19 @@ export default function Footer() {
         <Link href={""}>Training</Link>
       </div>
       <div className='grid'>
+        <div className='mr-10 -ml-10 y-space-5'>
         <h1 className='font-bold text-xl'>Social Media Topics</h1>
         <Link href={""}>Social Listening Guide</Link>
         <Link href={""}>Social Media Monitoring</Link>
         <Link href={""}>Social Media Management</Link>
-        <h1 className='font-bold text-xl'>Customer Service Topics</h1>
+        <h1 className='font-bold text-xl py-5'>Customer Service Topics</h1>
         <Link href={""}>CCaaS Guide</Link>
         <Link href={""}>Customer Service</Link>
         <Link href={""}>Contact Center AI (CCAI)</Link>
+        </div>
       </div>
 
+      </div>
       </div>
     </>
   )
