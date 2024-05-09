@@ -70,7 +70,7 @@ function IconicBrands1() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     arrows: false,
     dots: false
   };
@@ -78,13 +78,13 @@ function IconicBrands1() {
   return (
     <>
     <div>
-        <h1 className='font-bold py-10 text-4xl text-center text-black'>Why the most iconic brands chose Sprinklr</h1>
+        <h1 className='font-bold py-10 text-4xl text-center bg-gray-100 text-black'>Why the most iconic brands chose Sprinklr</h1>
     </div>
 
     <div>
       <Slider {...settings} lazyLoad='ondemand'>
         {data.map((item, index) => (
-          <div key={index} className={` text-black carousel-item ${currentIndex === index ? 'active' : ''}`}>
+          <div key={index} className={` text-black bg-gray-100 carousel-item ${currentIndex === index ? 'active' : ''}`}>
             <div className=' px-20 bg-white mx-24 -mx-18 my-10  flex rounded-{50px}' style={{ height: '450px' }}>
             <div className='left-side w-100 h-50 mx-2'>
               <img className="w-95 h-full mr-18 -ml-20 p-2 mx-10" src={item.image} alt="None" />
