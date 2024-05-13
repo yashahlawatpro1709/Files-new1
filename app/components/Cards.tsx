@@ -1,10 +1,9 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Card from './Card';
-import { Truculenta } from 'next/font/google';
 
 interface CardData {
   header: string;
@@ -12,11 +11,6 @@ interface CardData {
   imageSrc: string;
   body: string;
   buttonBody: string;
-}
-
-interface Style {
-  transform: string;
-  transition: string;
 }
 
 const cardDataset: CardData[] = [
@@ -66,21 +60,31 @@ const cardDataset: CardData[] = [
 
 const Cards: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [sliderInitialized, setSliderInitialized] = useState(false);
+
+  const handleSlideChange = useCallback(
+    (index: number) => {
+      if (currentIndex !== index) setCurrentIndex(index);
+    },
+    [currentIndex]
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % cardDataset.length);
+      if (sliderInitialized) {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % cardDataset.length);
+      }
     }, 3000); // Change the interval time as needed
 
     return () => clearInterval(interval);
-  }, []);
+  }, [sliderInitialized]);
 
   const settings = {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 5000,
     arrows: false,
     dots: false,
     centerMode: true,
@@ -95,7 +99,9 @@ const Cards: React.FC = () => {
           centerPadding: '20px'
         }
       }
-    ]
+    ],
+    afterChange: handleSlideChange, // Update currentIndex after each slide change
+    onInit: () => setSliderInitialized(true) // Set slider initialization state
   };
 
   return (
@@ -111,6 +117,7 @@ const Cards: React.FC = () => {
               body={card.body}
               buttonBody={card.buttonBody}
               isActive={currentIndex === index}
+              scale={currentIndex === 1 ? 1.2 : 1} // Scale only the card at index 1
             />
           </div>
         ))}
@@ -119,7 +126,7 @@ const Cards: React.FC = () => {
         {cardDataset.map((_, index) => (
           <button
             key={_.imageSrc}
-            className={`w-24 h-3 bg-gray-500 rounded-full ${currentIndex === index ? 'bg-gray-900' : ''} mx-1`}
+            className={`w-20 h-2 bg-gray-500 rounded-full ${currentIndex === index ? 'bg-gray-900' : ''} mx-1`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}

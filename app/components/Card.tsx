@@ -9,17 +9,18 @@ type CardProps = {
   buttonBody: string;
   isActive: boolean;
   index: number;
+  scale:number;
 };
 
 const Card = ({ header, subHeader, imageSrc, body, buttonBody, isActive, index }: CardProps) => {
   const scaled = isActive || index === 1 ? "scale-110" : ""; // Apply scaling to active or center card
   const transitionClass = isActive || index === 1 ? "transition-transform" : ""; // Apply transition only to active or center card
-  const sizeClass = isActive ? "h-[420px] w-[460.01px]" : "h-[400.73px] w-[450.01px]"; // Adjust size based on active or center card
+  const sizeClass = isActive ? "h-[400px] w-[495.01px]" : "h-[395.73px] w-[490.01px]"; // Adjust size based on active or center card
 
   return (
-    <div className={`px py-5 text-center mr-15 ml-15 ${scaled} ${transitionClass}`} style={{ marginRight: '30px', marginLeft: '10px' }}>
+    <div className={`py-5 text-center mr-15 ml-15 ${scaled} ${transitionClass}`} style={{ marginRight: '30px', marginLeft: '20px' }}>
       <div className={`flex flex-col items-center bg-white p-6 tablet:p-10 desktop:p-14 rounded-[12px] glass ${sizeClass}`} style={{ 
-        border: "4px solid transparent", // Border style set to transparent
+        border: "5px solid transparent", // Border style set to transparent
         borderRadius:"15px", // Curved border radius
         borderImage: "linear-gradient(135deg, #118acb 35%, #56b174 75%, #f3e137 85%, #faa21b) 1", // Rainbow border gradient
         borderImageSlice: "1", // Ensure the border image covers the entire border
@@ -34,7 +35,7 @@ const Card = ({ header, subHeader, imageSrc, body, buttonBody, isActive, index }
               <img
                 src={imageSrc}
                 alt="car!"
-                className="w-[200px] h-[190px]" // Set maximum width and height for the image
+                className="w-[250px] h-[190px]" // Set maximum width and height for the image
               />
             </figure>
           </div>
